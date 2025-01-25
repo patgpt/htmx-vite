@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
+    <script src="/node_modules/htmx.org/dist/htmx.min.js"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div id="app" class="container mx-auto px-4 py-8">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Your Name</h1>
+        <p class="text-xl text-gray-600">Full Stack Developer</p>
+      </header>
+
+      <section id="about" class="mb-12 prose lg:prose-xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4">About Me</h2>
+        <p class="text-gray-700">
+          A passionate developer with expertise in modern web technologies.
+        </p>
+      </section>
+
+      <section id="projects" class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project cards will be dynamically loaded with HTMX -->
+        </div>
+      </section>
+
+      <section id="skills" class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Skills</h2>
+        <div class="flex flex-wrap gap-4">
+          <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full"
+            >TypeScript</span
+          >
+          <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full"
+            >HTMX</span
+          >
+          <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full"
+            >Tailwind CSS</span
+          >
+          <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full"
+            >Vite</span
+          >
+        </div>
+      </section>
+
+      <section id="contact" class="max-w-md mx-auto">
+        <h2 class="text-2xl font-bold mb-6">Contact Me</h2>
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
